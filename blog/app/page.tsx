@@ -1,4 +1,6 @@
 import { ProjectPosts } from 'app/components/posts'
+import Spline from '@splinetool/react-spline/next';
+
 
 export default function Page() {
   return (
@@ -12,6 +14,13 @@ export default function Page() {
       <p className="mb-4">
         {` I specialize in React, Express, and backend development, and have had the privilege of working on projects like `}
       </p>
+      <main>
+      <Spline
+        scene="https://prod.spline.design/AjsmFjC1hdAykLqb/scene.splinecode" 
+        width={620}
+        height={626}
+      />
+    </main>
       <div className="my-8">
         <ProjectPosts />
       </div>
