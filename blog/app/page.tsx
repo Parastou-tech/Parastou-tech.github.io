@@ -17,9 +17,7 @@ export default function Page() {
       <main>
       <Spline
         scene="https://prod.spline.design/AjsmFjC1hdAykLqb/scene.splinecode" 
-        width={620}
-        height={626}
-      />
+        />
     </main>
       <div className="my-8">
         <ProjectPosts />
