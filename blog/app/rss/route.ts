@@ -1,5 +1,5 @@
 import { baseUrl } from 'app/sitemap'
-import { getProjectPosts } from 'app/project/utils'
+import { getProjectPosts } from 'app/projects/utils'
 
 export async function GET() {
   let allProjects = await getProjectPosts()
@@ -15,7 +15,7 @@ export async function GET() {
       (post) =>
         `<item>
           <title>${post.metadata.title}</title>
-          <link>${baseUrl}/project/${post.slug}</link>
+          <link>${baseUrl}/projects/${post.slug}</link>
           <description>${post.metadata.summary || ''}</description>
           <pubDate>${new Date(
             post.metadata.publishedAt

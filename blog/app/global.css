@@ -4,7 +4,25 @@
   background-color: #47a3f3;
   color: #fefefe;
 }
+.spline-background1 {
+  position: fixed; /* Ensures it stays behind everything */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  z-index: -1; /* Places it behind other content */
+  overflow: hidden; /* Prevents any unwanted scrollbars */
+}
 
+.spline-background2 {
+  position: fixed; /* Ensures it stays behind everything */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  z-index: -1; /* Places it behind other content */
+  overflow: hidden; /* Prevents any unwanted scrollbars */
+}
 :root {
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
@@ -84,7 +102,8 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-4;
+  color: #353c4d !important;
 }
 
 .prose h1 {
@@ -148,3 +167,10 @@ table {
 .title {
   text-wrap: balance;
 }
+
+/* At the bottom of global.css (after Tailwind imports, etc.): */
+html,
+body {
+  color: #353c4d !important;
+}
+

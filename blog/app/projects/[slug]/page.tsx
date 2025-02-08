@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
-import { formatDate, getProjectPosts } from 'app/project/utils'
+import { formatDate, getProjectPosts } from 'app/projects/utils'
 import { baseUrl } from 'app/sitemap'
 
 export async function generateStaticParams() {
@@ -35,7 +35,7 @@ export function generateMetadata({ params }) {
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/project/${post.slug}`,
+      url: `${baseUrl}/projects/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -51,7 +51,7 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function project({ params }) {
+export default function projects({ params }) {
   let post = getProjectPosts().find((post) => post.slug === params.slug)
 
   if (!post) {
@@ -59,7 +59,7 @@ export default function project({ params }) {
   }
 
   return (
-    <section>
+    <section className = "bg-gray-100">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -74,7 +74,7 @@ export default function project({ params }) {
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/project/${post.slug}`,
+            url: `${baseUrl}/projects/${post.slug}`,
             author: {
               '@type': 'Person',
               name: 'My Portfolio',
