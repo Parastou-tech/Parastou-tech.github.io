@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className =  "bg-gray-100">
+    <div>
       <h1 className=" font-semibold text-2xl mb-8 tracking-tighter">My Projects</h1>
       <ProjectPosts />
     </div>

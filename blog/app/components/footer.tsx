@@ -22,7 +22,7 @@ export default function Footer() {
         
         <li>
           <a
-            className="flex flex-row space-x-0 pr-10 items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative transition-all hover:text-blue-400"
+            className="flex flex-row space-x-0 pr-10 items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative transition-all hover:blue-400"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/Parastou-tech"
@@ -33,7 +33,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            className="flex items-center space-x-0 pr-10 transition-all hover:text-blue-400 "
+            className="flex items-center space-x-0 pr-10 transition-all hover:blue-400 "
             rel="noopener noreferrer"
             target="_blank"
             href="https://www.linkedin.com/in/parastou-fard/"
