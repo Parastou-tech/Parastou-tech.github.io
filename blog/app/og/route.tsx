@@ -1,4 +1,6 @@
 import { ImageResponse } from 'next/og'
+export const dynamic = 'force-dynamic';
+
 
 export function GET(request: Request) {
   let url = new URL(request.url)
