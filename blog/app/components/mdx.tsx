@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
-import SplineArm from 'app/projects/posts/splinearm'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -98,7 +97,6 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
-  SplineArm
 }
 
 export function CustomMDX(props) {
