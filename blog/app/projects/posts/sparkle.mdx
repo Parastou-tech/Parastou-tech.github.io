@@ -1,0 +1,70 @@
+---
+title: "Sparkle Witch Game"
+publishedAt: "2024-06-03"
+---
+
+## Overview
+
+The **Sparkle Witch Game** is an object-oriented Java simulation that creates an engaging, dynamic world populated by various entities. The system responds to user input in real time, introducing world-changing events and transformations as the game progresses. Developed between **May 2024** and **June 2024**, this project emphasizes interactive storytelling and procedurally generated behavior, all powered by core Java functionalities.
+
+---
+
+## Key Features
+
+### Object-Oriented Design
+- **Entity-Based Architecture**: Each character (Witch, Sparkle, etc.) is its own class, enabling unique methods and behaviors.
+- **Randomization**: Leveraged `java.util.Random` for generating unpredictable gameplay events such as determining whether an entity becomes a sparkle or poison.
+
+### Interactive Environment
+- **Real-Time Transformations**: Clicking on different tiles or entities triggers environment changes (e.g., grass turning barren, mushrooms spawning).
+- **Custom Animations**: Java-based animations for witches, sparkles, and other entities enhance immersion, showcasing items like the Witch’s broom blowing in the wind.
+![sparkle witch game interface](/sparkle1.png)
+### Entities and Behaviors
+
+#### Entity 1: Witch
+- Moves toward **mushrooms** and **stumps**, transforming them randomly into **sparkle** or **poison**.
+- Carries a broom and has hair animations that respond to movement and wind-like effects.
+  
+#### Entity 2: Sparkle
+- **Exponential Spread**: Sparkles replicate nearby, and in some cases spawn poison, creating a chain reaction that continuously evolves the game map.
+
+### World-Changing Event
+- **Grass Transformation**: Clicking on a free grass tile depletes the surrounding grass (unless occupied by an entity) into **barren land** and **burnt mushrooms**.
+- **Fairy to Witch**: Clicking on a fairy turns it into a witch, prompting a new cycle of transformations (turning stumps and mushrooms into sparkles or poison).
+
+### Instance Variable
+- **Color**  
+  - Determines if a stump or mushroom transforms into **poison** or **sparkle**, selected at random using `java.util.Random`.
+  - Implemented as a `double` type. If the randomly generated number is less than `5.0`, the item becomes poison; otherwise, it becomes a sparkle.
+![sparkle witch game interface 2](/sparkle2.png)
+---
+
+### Audio
+- **Background Music**: A **Mario soundtrack** plays throughout the entire game.
+- Learned how to implement continuous sound within an IntelliJ project by referencing a **YouTube tutorial**.
+
+### Handmade/Self-Drawn Graphics
+- **Witch, Star, Poison, and Black Mushroom**: Custom illustrations added to the immersive atmosphere.
+
+### Interactivity
+- **Fairy Click**: Clicking on a fairy transforms it into a witch.
+- **Tile Manipulation**: Surrounding 8 tiles turn to black mushrooms unless they contain another entity.
+
+---
+
+## Instructions
+
+1. **Transforming a Fairy**  
+   - Click on a **fairy** to convert it into a **witch**.
+2. **Changing the Environment**  
+   - Click on a **patch of grass** or **nearby entities** to modify terrain into barren land or produce additional black mushrooms.
+3. **Observing Sparkles and Poisons**  
+   - **Be patient** to see exponential spread. Sparkles and poisons may appear slowly, but will eventually propagate through the map.
+4. **Waiting for Random Outcomes**  
+   - **Sparkle vs. Poison** is randomly chosen when the Witch interacts with mushrooms or stumps.
+
+---
+
+## Conclusion
+
+The **Sparkle Witch Game** combines interactive gameplay, random events, and entity-based design to create a lively simulation. From witches that enchant mushrooms at random to sparkles that proliferate across the board, each element demonstrates core **Java** programming principles in a fun and visually engaging environment. Audio integration and custom graphics further enhance the user experience, while the real-time transformation mechanics encourage experimentation and exploration.
