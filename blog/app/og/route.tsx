@@ -1,14 +1,13 @@
 import { ImageResponse } from 'next/og'
 
-export function GET(request: Request) {
-  let url = new URL(request.url)
-  let title = url.searchParams.get('title') || 'Next.js Portfolio Starter'
-
+// Return a static OG image without using dynamic runtime data.
+export function GET() {
+  const title = 'Next.js Portfolio Starter'
   return new ImageResponse(
     (
-      <div tw="flex flex-col w-full h-full items-center justify-center bg-white">
-        <div tw="flex flex-col md:flex-row w-full py-12 px-4 md:items-center justify-between p-8">
-          <h2 tw="flex flex-col text-4xl font-bold tracking-tight text-left">
+      <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', background: 'white' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'left' }}>
             {title}
           </h2>
         </div>
