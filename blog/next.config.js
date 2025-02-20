@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/portfolio/blog",
+    basePath: "/portfolio",
     output: "export",
     reactStrictMode: true,
   };
