@@ -1,9 +1,10 @@
 import { ImageResponse } from 'next/og'
-export const dynamic = 'force-dynamic';
 
-export function GET(request: Request) {
-  let url = new URL(request.url)
-  let title = url.searchParams.get('title') || 'Next.js Portfolio Starter'
+// Removed: export const dynamic = 'force-dynamic';
+
+export function GET() {
+  // Use a static title instead of extracting it from the request URL
+  const title = 'Next.js Portfolio Starter';
 
   return new ImageResponse(
     (
@@ -19,5 +20,5 @@ export function GET(request: Request) {
       width: 1200,
       height: 630,
     }
-  )
+  );
 }
