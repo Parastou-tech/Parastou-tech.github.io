@@ -8,8 +8,8 @@
   position: fixed; /* Ensures it stays behind everything */
   top: 0;
   left: 0;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   z-index: -1; /* Places it behind other content */
   overflow: hidden; /* Prevents any unwanted scrollbars */
 }
@@ -18,8 +18,8 @@
   position: fixed; /* Ensures it stays behind everything */
   top: 0;
   left: 0;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   z-index: -1; /* Places it behind other content */
   overflow: hidden; /* Prevents any unwanted scrollbars */
 }
